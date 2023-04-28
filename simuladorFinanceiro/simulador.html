@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF-SimuladorFinanceiro</title>
+</head>
+<body>
+    Qual frango de corte você possui? 
+    <select id="tipo_frag">
+        <option value=""></option>
+        <option value="9.94"> Embrapa 021 </option>
+        <option value="11.56"> Paraíso Pedrês </option>
+        <option value="10.50"> Gigante Negro </option>
+        <option value="9.18"> Caipira Pescoço Pelado </option>
+        <option value="10.47"> Pesadão Vermelho </option>
+    </select> <br>
+    Quantidade de aves por galpão : <input type="number" id="qtd_aves_i"> <br>
+    Quantidade de galpões : <input type="number" id="qtd_galpao_i"> <br>
+    Area do galpão : <input type="number" id="area_gal_i"> <br>
+    <button onclick="calcular()"> Calcular! </button> <br>
+    <div id="exibir_infos"></div>
+
+    
+</body>
+</html>
+
+<script>
+    
+    function calcular(){   
+        exibir_infos.innerHTML = '';
+        var valor = Number(tipo_frag.value);
+        var qtd_aves = Number(qtd_aves_i.value);
+        var qtd_galpao = Number(qtd_galpao_i.value);
+        var total = (valor * qtd_aves) * qtd_galpao; 
+        var economia = total * 20 / 100; 
+        var area = Number(area_gal_i.value);
+        var valor_sensor = (((area / 12).toFixed(0)) * 200) * qtd_galpao;
+        
+
+        if(valor <= 0 || qtd_aves <= 0 || qtd_galpao <= 0){
+            alert('Valores invalidos inseridos!');
+        }else{
+            
+            exibir_infos.innerHTML += `O seu valor atual investido em aves é de R$${total.toFixed(2)} <br>`;
+            exibir_infos.innerHTML += `<h2> Vamos simular o prejuizo que você pode ter! </h2><br>`;
+            exibir_infos.innerHTML += `<span id="spam1"> Com o prejuizo de 20%, sua perda será de : R$${(economia).toFixed(2)} </span> <br>`;   
+            exibir_infos.innerHTML += `<span id="spam2"> Com o prejuizo de 10%, sua perda será de : R$${(total * 10 / 100).toFixed(2)}  </span><br>`; 
+            exibir_infos.innerHTML += `<span id="spam3"> Com o prejuizo de 5%, sua perda será de : R$${(total * 5 / 100).toFixed(2)} </span><br>`;   
+            
+            
+            
+            
+            
+            
+            
+
+
+
+            exibir_infos.innerHTML += `Você precisará de ${(area / 12).toFixed(0)} sensores por galpão, 
+            totalizando um investimento de R$${(valor_sensor).toFixed(2)} <br>`
+        };
+    };
+
+</script>

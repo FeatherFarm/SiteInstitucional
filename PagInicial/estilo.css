@@ -1,8 +1,17 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    padding: 0;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap');
+
+
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 html{
@@ -263,12 +272,11 @@ input[type='Submit']:hover {
 }
 
 .textosEmpresa .corpo {
-    font-family: 'Poppins', monospace;
     margin-left: 100px;
     color: black;
     line-height: 45px;
     width: 89%;
-    margin-top: -90px;
+    margin-top: -60px;
     font-size: 25px;
 
 }
@@ -323,10 +331,10 @@ input[type='Submit']:hover {
 
 .sensor .corpo {
     font-size: 18px;
-    font-family: 'Poppins';
     line-height: 31.5px;
     text-align: center;
-    color: black;
+    color: #222;
+    font-weight: 500;
     margin: -100px 30px;
 }
 
@@ -386,7 +394,7 @@ input[type='Submit']:hover {
 
 .containersSobreNos .texto {
     width: 50%;
-    height: 600px;
+    height: auto;
     border: 1px solid white;
     display: flex;
     justify-content: center;
@@ -397,6 +405,15 @@ input[type='Submit']:hover {
 .texto .conteudoTexto {
     font-family: 'Poppins';
     padding: 50px 100px 50px 100px;
+    color: #222;
+    font-size: 22px;
+    line-height: 48px;
+}
+.laranja{
+    color: #E37F2A;
+}
+.verde{
+    color: #39842C;
 }
 
 .footer {

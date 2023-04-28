@@ -1,323 +1,488 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleCadastro.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../PagInicial/imagens_e_fontes/logo.png"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="img-logo/logo 2.png">
+    <title>FF-Cadastro</title>
+  </head>
 
-    <title>Cadastro</title>
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <form action="" class="form">
-            <h1 class="text-center">Cadastro</h1>
-            <!-- barra de progresso -->
-            <div class="progressbar">
-                <div class="progress" id="progress"></div>
-                <div class="progress-step progress-step-active">
-
-                </div>
-                <div class="progress-step"></div>
-                <div class="progress-step"></div>
-                <div class="progress-step"></div>
-            </div>
-
-            <!-- final da barra de progresso-->
-            <div class="form-step form-step-active">
-                <div class="input-group">
-                    <label for="nome_empresa">NOME DA EMPRESA <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_empresa" autocomplete="off" type="text" name="empresa" placeholder="EMPRESA" required="required"
-                        minlength="2" maxlength="50">
-                </div>
-
-                <div class="input-group">
-                    <label for="cnpj_empresa">CNPJ <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_cnpj" autocomplete="off" type="text" name="cnpj" placeholder="XX.XXX.XXX/0001-XX"
-                        required="required" maxlength="18" minlength="18">
-                </div>
-
-                <div class="input-group">
-                    <label for="Site">SITE <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_site" autocomplete="off" type="text" name="site" placeholder="www.exemple.com.br" required="required" minlength="2"
-                        maxlength="50">
-                </div>
-
-                <div class="input-group">
-                    <label for="Senha">SENHA <b style="color: red;" title="Este campo é obrigatório" >*</b></label>
-                    <input id="input_senha" autocomplete="off" type="password" name="senha" placeholder="********"
-                        required="required" minlength="3" maxlength="8">
-                </div>
-
-                <div class="">
-                    <a href="#" class="btn btn-next width-50 ml-auto">Proximo</a>
-                </div>
-            </div>
-
-
-            <div class="form-step">
-                <div class="input-group">
-                    <label for="rua_endereco">RUA <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_rua" autocomplete="off" type="text" name="rua" placeholder="RUA" required="required" minlength="5"
-                        maxlength="50">
-                </div>
-
-                <div class="input-group">
-                    <label for="numero_endereco">NUMERO <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_numero" autocomplete="off" type="text" name="numero" placeholder="12345" required="required"
-                        minlength="1" maxlength="5">
-                </div>
-
-                <div class="input-group">
-                    <label for="Bairro_endereco">BAIRRO <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_bairro" autocomplete="off" type="text" name="bairro" placeholder="BAIRRO" required="required" min="2"
-                        maxlength="50">
-                </div>
-
-                <div class="btns-group">
-                    <a href="#" class="btn btn-prev">Voltar</a>
-                    <a href="#" class="btn btn-next">Proximo</a>
-                </div>
-            </div>
-
-            <div class="form-step">
-                <div class="input-group">
-                    <label for="Uf">UF <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_uf" autocomplete="off" class="input_uppercase" minlength="2" maxlength="2" type="text" name="uf" placeholder="SP"
-                        required="required">
-                </div>
-
-                <div class="input-group">
-                    <label for="cep">CEP <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_cep" autocomplete="off" type="text" name="cep" placeholder="01234-567" required="required"
-                        minlength="9" maxlength="9">
-                </div>
-
-                <div class="input-group">
-                    <label for="Cidade">CIDADE <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_cidade" autocomplete="off" type="text" name="cidade" placeholder="Exemple: São Paulo" required="required" min="2"
-                        maxlength="50">
-                </div>
-
-                <div class="btns-group">
-                    <a href="#" class="btn btn-prev">Voltar</a>
-                    <a href="#" class="btn btn-next">Proximo</a>
-                </div>
-            </div>
-
-            <div class="form-step">
-                <div class="input-group">
-                    <label for="Email">EMAIL <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_email" autocomplete="off" type="email" name="email"
-                        placeholder="Exemple@exemple.com" required="required" minlength="5" maxlength="50">
-                </div>
-
-                <div class="input-group">
-                    <label for="Email2">EMAIL (2)</label>
-                    <input id="input_email2" autocomplete="off" type="email" name="email2"
-                        placeholder="Exemple@exemple.com" minlength="5" maxlength="50">
-                </div>
-
-                <div class="input-group">
-                    <label for="Telefone">TELEFONE <b style="color: red;" title="Este campo é obrigatório">*</b></label>
-                    <input id="input_telefone" autocomplete="off" type="tel" name="tel" placeholder="(01)2345-6789"
-                        required="required" minlength="13" maxlength="13">
-                </div>
-
-                <div class="input-group">
-                    <label for="Telefone2">TELEFONE (2)</label>
-                    <input id="input_telefone2" autocomplete="off" type="tel" name="tel2" placeholder="(01)2345-6789"
-                        minlength="13" maxlength="13">
-                </div>
-
-                <div class="btns-group">
-                    <a href="#" class="btn btn-prev">Voltar</a>
-                    <button onclick="Validacao()" style="border:none" class="btn"><b>Concluir</b> </button>
-                </div>
-            </div>
-        </form>
-
-        <div class="form-image">
-            <div class="image-logo"><a href="../PagInicial/index.html" id="img_logo">
-                <img src="img-logo/logo 2.png" alt="img logo">
-            </a></div>
-            <div class="image-farm">
-                    <img src="img-cadastro/Group 22.png" alt="img cadastro">
-            </div>
-            
+      <form action="" class="form">
+        <h1 class="text-center">Cadastro</h1>
+        <!-- barra de progresso -->
+        <div class="progressbar">
+          <div class="progress" id="progress"></div>
+          <div class="progress-step progress-step-active"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
+          <div class="progress-step"></div>
         </div>
+
+        <!-- final da barra de progresso-->
+        <div class="form-step form-step-active">
+          <div class="input-group">
+            <label for="nome_empresa"
+              >NOME DA EMPRESA
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_empresa"
+              autocomplete="off"
+              type="text"
+              name="empresa"
+              placeholder="EMPRESA"
+              required="required"
+              minlength="2"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="cnpj_empresa"
+              >CNPJ
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_cnpj"
+              autocomplete="off"
+              type="text"
+              name="cnpj"
+              placeholder="XX.XXX.XXX/0001-XX"
+              required="required"
+              maxlength="18"
+              minlength="18"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="Site"
+              >SITE
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_site"
+              autocomplete="off"
+              type="text"
+              name="site"
+              placeholder="www.exemple.com.br"
+              required="required"
+              minlength="2"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="Senha"
+              >SENHA
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_senha"
+              autocomplete="off"
+              type="password"
+              name="senha"
+              placeholder="********"
+              required="required"
+              minlength="3"
+              maxlength="8"
+            />
+          </div>
+
+          <div class="">
+            <a href="#" class="btn btn-next width-50 ml-auto">Proximo</a>
+          </div>
+        </div>
+
+        <div class="form-step">
+          <div class="input-group">
+            <label for="rua_endereco"
+              >RUA
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_rua"
+              autocomplete="off"
+              type="text"
+              name="rua"
+              placeholder="RUA"
+              required="required"
+              minlength="5"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="numero_endereco"
+              >NUMERO
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_numero"
+              autocomplete="off"
+              type="text"
+              name="numero"
+              placeholder="12345"
+              required="required"
+              minlength="1"
+              maxlength="5"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="Bairro_endereco"
+              >BAIRRO
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_bairro"
+              autocomplete="off"
+              type="text"
+              name="bairro"
+              placeholder="BAIRRO"
+              required="required"
+              min="2"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Voltar</a>
+            <a href="#" class="btn btn-next">Proximo</a>
+          </div>
+        </div>
+
+        <div class="form-step">
+          <div class="input-group">
+            <label for="Uf"
+              >UF
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_uf"
+              autocomplete="off"
+              class="input_uppercase"
+              minlength="2"
+              maxlength="2"
+              type="text"
+              name="uf"
+              placeholder="SP"
+              required="required"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="cep"
+              >CEP
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_cep"
+              autocomplete="off"
+              type="text"
+              name="cep"
+              placeholder="01234-567"
+              required="required"
+              minlength="9"
+              maxlength="9"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="Cidade"
+              >CIDADE
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_cidade"
+              autocomplete="off"
+              type="text"
+              name="cidade"
+              placeholder="Exemple: São Paulo"
+              required="required"
+              min="2"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Voltar</a>
+            <a href="#" class="btn btn-next">Proximo</a>
+          </div>
+        </div>
+
+        <div class="form-step">
+          <div class="input-group">
+            <label for="Email"
+              >EMAIL
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_email"
+              autocomplete="off"
+              type="email"
+              name="email"
+              placeholder="Exemple@exemple.com"
+              required="required"
+              minlength="5"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="Email2">EMAIL (2)</label>
+            <input
+              id="input_email2"
+              autocomplete="off"
+              type="email"
+              name="email2"
+              placeholder="Exemple@exemple.com"
+              minlength="5"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="Telefone"
+              >TELEFONE
+              <b style="color: red" title="Este campo é obrigatório"
+                >*</b
+              ></label
+            >
+            <input
+              id="input_telefone"
+              autocomplete="off"
+              type="tel"
+              name="tel"
+              placeholder="(01)2345-6789"
+              required="required"
+              minlength="13"
+              maxlength="13"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="Telefone2">TELEFONE (2)</label>
+            <input
+              id="input_telefone2"
+              autocomplete="off"
+              type="tel"
+              name="tel2"
+              placeholder="(01)2345-6789"
+              minlength="13"
+              maxlength="13"
+            />
+          </div>
+
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Voltar</a>
+            <button onclick="Validacao()" style="border: none" class="btn" id="btnConcluir">
+              <b>Concluir</b>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="form-image">
+        <div class="image-logo">
+          <a href="../PagInicial/index.html" id="img_logo">
+            <img src="img-logo/logo 2.png" alt="img logo" />
+          </a>
+        </div>
+        <div class="image-farm">
+          <img src="img-cadastro/Group 22.png" alt="img cadastro" />
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
 <script>
-    // ---------- barra de progresso ----------
-    const prevBtns = document.querySelectorAll(".btn-prev");
-    const nextBtns = document.querySelectorAll(".btn-next");
-    const progress = document.getElementById("progress");
-    const formSteps = document.querySelectorAll(".form-step");
-    const progressSteps = document.querySelectorAll(".progress-step");
+  // ---------- barra de progresso ----------
+  const prevBtns = document.querySelectorAll(".btn-prev");
+  const nextBtns = document.querySelectorAll(".btn-next");
+  const progress = document.getElementById("progress");
+  const formSteps = document.querySelectorAll(".form-step");
+  const progressSteps = document.querySelectorAll(".progress-step");
 
-    let formStepsNum = 0;
+  let formStepsNum = 0;
 
-    nextBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            formStepsNum++;
-            updateFormSteps();
-            updateProgressbar();
-        });
+  nextBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      formStepsNum++;
+      updateFormSteps();
+      updateProgressbar();
+    });
+  });
+
+  prevBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      formStepsNum--;
+      updateFormSteps();
+      updateProgressbar();
+    });
+  });
+
+  function updateFormSteps() {
+    formSteps.forEach((formStep) => {
+      formStep.classList.contains("form-step-active") &&
+        formStep.classList.remove("form-step-active");
     });
 
-    prevBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            formStepsNum--;
-            updateFormSteps();
-            updateProgressbar();
-        });
+    formSteps[formStepsNum].classList.add("form-step-active");
+  }
+
+  function updateProgressbar() {
+    progressSteps.forEach((progressStep, idx) => {
+      if (idx < formStepsNum + 1) {
+        progressStep.classList.add("progress-step-active");
+      } else {
+        progressStep.classList.remove("progress-step-active");
+      }
     });
 
-    function updateFormSteps() {
-        formSteps.forEach((formStep) => {
-            formStep.classList.contains("form-step-active") &&
-                formStep.classList.remove("form-step-active");
-        });
+    const progressActive = document.querySelectorAll(".progress-step-active");
 
-        formSteps[formStepsNum].classList.add("form-step-active");
+    progress.style.width =
+      ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+  }
+
+  // ---------- Mascara para as inputs ----------
+
+  const cep = document.querySelector("input_cep");
+
+  input_cep.addEventListener("keypress", () => {
+    let ceplength = input_cep.value.length;
+
+    if (ceplength === 5) {
+      input_cep.value += "-";
     }
+  });
 
-    function updateProgressbar() {
-        progressSteps.forEach((progressStep, idx) => {
-            if (idx < formStepsNum + 1) {
-                progressStep.classList.add("progress-step-active");
-            } else {
-                progressStep.classList.remove("progress-step-active");
-            }
-        });
+  const cnpj = document.querySelector("input_cnpj");
 
-        const progressActive = document.querySelectorAll(".progress-step-active");
+  input_cnpj.addEventListener("keypress", () => {
+    let cnpjlength = input_cnpj.value.length;
 
-        progress.style.width =
-            ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+    if (cnpjlength === 2 || cnpjlength === 6) {
+      input_cnpj.value += ".";
+    } else if (cnpjlength === 10) {
+      input_cnpj.value += "/";
+    } else if (cnpjlength === 15) {
+      input_cnpj.value += "-";
     }
+  });
 
-    // ---------- Mascara para as inputs ----------
+  const telefone = document.querySelector("input_telefone");
 
-    const cep = document.querySelector("input_cep")
+  input_telefone.addEventListener("keypress", () => {
+    let tellength = input_telefone.value.length;
 
-    input_cep.addEventListener("keypress", () => {
-        let ceplength = input_cep.value.length
-
-        if (ceplength === 5) {
-            input_cep.value += '-'
-        }
-    })
-
-    const cnpj = document.querySelector("input_cnpj")
-
-    input_cnpj.addEventListener("keypress", () => {
-        let cnpjlength = input_cnpj.value.length
-
-        if (cnpjlength === 2 || cnpjlength === 6) {
-            input_cnpj.value += '.'
-        } else if (cnpjlength === 10) {
-            input_cnpj.value += '/'
-        } else if (cnpjlength === 15) {
-            input_cnpj.value += '-'
-        }
-    })
-
-    const telefone = document.querySelector("input_telefone")
-
-    input_telefone.addEventListener("keypress", () => {
-        let tellength = input_telefone.value.length
-
-        if (tellength === 0) {
-            input_telefone.value += '('
-        } else if (tellength === 3) {
-            input_telefone.value += ')'
-        } else if (tellength === 8) {
-            input_telefone.value += '-'
-        }
-    })
-
-    const telefone2 = document.querySelector("input_telefone")
-
-    input_telefone2.addEventListener("keypress", () => {
-        let tel2length = input_telefone2.value.length
-
-        if (tel2length === 0) {
-            input_telefone2.value += '('
-        } else if (tel2length === 3) {
-            input_telefone2.value += ')'
-        } else if (tel2length === 8) {
-            input_telefone2.value += '-'
-        }
-    })
-
-    // ---------- Validações ----------
-
-
-    function Validacao() {
-        var Empresa = input_empresa.value;
-        var Cnpj = input_cnpj.value;
-        var Site = input_site.value;
-        var Senha = input_senha.value;
-        var Rua = input_rua.value;
-        var Numero = input_numero.value;
-        var Bairro = input_bairro.value;
-        var Uf = input_uf.value;
-        var Cep = input_cep.value;
-        var Cidade = input_cidade.value;
-        var Email = input_email.value;
-        var Email2 = input_email2.value;
-        var Telefone = input_telefone.value;
-        var Telefone2 = input_telefone2.value;
-
-        
-        if (Empresa == false && 
-            Cnpj == false && 
-            Site == false && 
-            Senha == false && 
-            Rua == false && 
-            Numero == false && 
-            Bairro == false && 
-            Uf == false && 
-            Cep == false &&
-            Cidade == false &&
-            Email == false && 
-            Telefone == false) {
-            alert("Preencha todos os campos")
-        }
-        if (Empresa == false || Empresa.length < 2) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Cnpj == false || Cnpj.length < 18) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Site == false || Site.length < 2) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Senha == false || Senha.length < 3) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Rua == false || Rua.length < 5) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Numero == false || Numero.length < 1) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Bairro == false || Bairro.length < 2) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Uf == false || Uf.length < 2) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Cep == false || Cep.length < 9) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Cidade == false || Cidade.length < 2) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Email == false || Email.length < 5) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Telefone == false || Telefone.length < 13) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Telefone2 == true && Telefone2.length < 13 ) {
-            alert("Parece que você não preencheu os campos corretamente")
-        } else if (Email2 == true && Email2.length < 5) {
-            alert("Parece que você não preencheu os campos corretamente")
-        }
+    if (tellength === 0) {
+      input_telefone.value += "(";
+    } else if (tellength === 3) {
+      input_telefone.value += ")";
+    } else if (tellength === 8) {
+      input_telefone.value += "-";
     }
+  });
+
+  const telefone2 = document.querySelector("input_telefone");
+
+  input_telefone2.addEventListener("keypress", () => {
+    let tel2length = input_telefone2.value.length;
+
+    if (tel2length === 0) {
+      input_telefone2.value += "(";
+    } else if (tel2length === 3) {
+      input_telefone2.value += ")";
+    } else if (tel2length === 8) {
+      input_telefone2.value += "-";
+    }
+  });
+
+  // ---------- Validações ----------
+
+  function Validacao() {
+    var Empresa = input_empresa.value;
+    var Cnpj = input_cnpj.value;
+    var Site = input_site.value;
+    var Senha = input_senha.value;
+    var Rua = input_rua.value;
+    var Numero = input_numero.value;
+    var Bairro = input_bairro.value;
+    var Uf = input_uf.value;
+    var Cep = input_cep.value;
+    var Cidade = input_cidade.value;
+    var Email = input_email.value;
+    var Email2 = input_email2.value;
+    var Telefone = input_telefone.value;
+    var Telefone2 = input_telefone2.value;
+
+    if (Empresa == false || Empresa.length < 2) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Cnpj == false || Cnpj.length < 18) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Site == false || Site.length < 2) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Senha == false || Senha.length < 3) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Rua == false || Rua.length < 5) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Numero == false || Numero.length < 1) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Bairro == false || Bairro.length < 2) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Uf == false || Uf.length < 2) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Cep == false || Cep.length < 9) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Cidade == false || Cidade.length < 2) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Email == false || Email.length < 5) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Telefone == false || Telefone.length < 13) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Telefone2 == true && Telefone2.length < 13) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else if (Email2 == true && Email2.length < 5) {
+      alert("Parece que você não preencheu os campos corretamente");
+    } else {
+        document
+    .getElementById("btnConcluir")
+    .addEventListener("click", function () {
+      window.location.href = "../TelaLogin/login_page.html";
+    });
+    }
+  }
+  
 </script>
