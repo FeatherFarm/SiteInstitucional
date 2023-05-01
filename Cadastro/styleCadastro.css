@@ -15,7 +15,7 @@ body {
     padding: 2%;
     margin: 0;
     margin-top: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     display: flex;
     place-items: center;
     background: linear-gradient(90deg,rgba(255,166,0,1)0%, rgba(255,141,0,1)100%);
@@ -95,7 +95,7 @@ input {
     border: 1px solid rgba(227, 127, 42, 1);
     border-radius: 0.8rem;
 }
-    
+
 
 input:focus{
     border: #134e06 1px solid;
@@ -249,3 +249,8 @@ label {
     text-transform: uppercase;
 }
 
+/* .alert {
+    padding: 20px;
+    background-color: #f44336; /* Red 
+    color: white;
+    margin-bottom: 15px;} */
